@@ -19,13 +19,20 @@ body {
 
 .green {
   color: #27c7ab;
+}
+
+.bolder {
   font-weight:bolder;
+}
+
+.grey_form {
+  color: #cbcbcb;
 }
 
 .main_width {
   width: 900px;
   margin: auto;
-  border: 1px solid red; /* to jest robocza ramka */
+/*  border: 1px solid red; /* to jest robocza ramka */
 }
 
 nav {
@@ -99,10 +106,10 @@ li {
 }
 
 .block {
-  position: relative;
+  position: ; /* relative*/
   display: inline-block;
   width: 270px;
-  height: 600px;
+  height: 550px;
   margin: 0;
   padding: 0;
   float: left;
@@ -118,6 +125,23 @@ li {
   margin-top: -20px;
 }
 
+.armchair:before {
+position: absolute;
+content: "<";
+font-size: 60px;
+top: 100px;
+}
+
+/*.armchair:after {
+position: absolute;
+float, right;
+content: ">";
+font-size: 60px;
+top: 100px;
+left: px;
+} */
+
+
 .armchair img {
   width: 450px;
   height: 300px;
@@ -132,8 +156,9 @@ li {
   margin: 20px 25px 0;
   text-align: center;
   line-height: 1.5em;
-  border: 1px solid yellow;
 }
+
+
 
 button {
   width: 200px;
@@ -148,6 +173,16 @@ button {
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   border: none;
+}
+
+
+.first_section button:after  {
+position: absolute;
+color: #27c7ab;
+content: ">";
+font-size: 60px;
+top: 60px;
+left: 385px;
 }
 
 .second_section {
@@ -229,9 +264,8 @@ width: 110px;
   font-size: 0.8em;
   color: #555555;
   border-bottom: 4px solid #27c7ab;
-  line-height: 2em;
+  line-height: 0.5em;
   margin-top: 30px;
-  margin-bottom: px;
   width: 270px;
   height: 16px;
 }
@@ -301,11 +335,6 @@ width: 110px;
   padding-top: 20px;
 }
 
-.price_label .price_groszy .PLN_MSC     /* do wyrzucenia */
-{
-  color: ;
-}
-
 .grey {
   color: #c7c7c7;
   font-weight: bolder;
@@ -358,3 +387,231 @@ table+button {    /* lewy margines na zero, zeby wysrodkowac,  */
  margin-left: -40px;
  margin-top: -35px;
 }
+
+form {
+  margin: 40px 0 0;
+  /*width: 925px; */
+  height: 500px;
+}
+
+fieldset {        /*tu był fieldset i on znika ! */
+  border: none;
+}
+
+form .larger {
+  display: inline-block;
+  float: left;
+  width: 500px;
+}
+
+fieldset.larger {
+  width: 450px;
+}
+
+input.larger {
+  display: block;
+  margin-bottom: 50px;
+  height: 40px;
+  border: 1px solid #27c7ab;
+}
+
+textarea {
+  height: 160px;
+  width: 100%;
+  resize: none;
+  margin-bottom: 20px;
+  border: 1px solid #27c7ab;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+::-moz-placeholder {
+  font-size: 20px;
+}
+
+::-ms-input-placeholder {
+  font-size: 20px;
+}
+
+form .smaller {
+  display: inline-block;
+  width: 340px;
+  /*border: 1px solid green; */
+  margin-left: 20px;
+}
+
+fieldset.smaller { /*czemu to nie działa?*/
+  width: 200px;
+}
+
+.smaller img {  /* red chair*/
+  width: 200px;
+  margin-left: 60px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+fieldset .checkbox .smaller {
+  display: inline-block;
+  margin: 30px 30;
+}
+
+/*.checked {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: inline-block;
+  margin-left: 70px;
+  border: 1px solid #27c7ab;
+  border-radius: 10%;
+  padding: 10px;
+}
+
+  .checked:active, .checked:checked:active   {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/form_ok.jpg");
+    display: inline-block;
+    margin-left: 70px;
+    border: 1px solid #27c7ab;
+    border-radius: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+  }
+
+  .checked:checked:after {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/form_ok.jpg");
+    display: inline-block;
+    margin-left: 70px;
+    border: 1px solid #27c7ab;
+    border-radius: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+  }
+*/
+
+
+div .form_ok {
+  width: 30px;
+  height: 30px;
+  /*background-image: url("../images/form_ok.jpg");*/
+  display: inline-block;
+  margin-left: 70px;
+  border: 1px solid #27c7ab;
+  border-radius: 10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+}
+
+div .form_ok: {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/form_ok.jpg");
+  display: inline-block;
+  margin-left: 70px;
+  border: 1px solid #27c7ab;
+  border-radius: 10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  z-index: 20000;
+}
+      /*checkbox*/
+input.smaller.checkbox {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  label.smaller.checkbox {
+    margin-top: 40px;
+    margin-left: 10px;
+    width: 220px;
+    height: 40px;
+    display: inline-block;
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+
+  button.smaller {
+    width: 270px;
+    height: 60px;
+    font-size: 20px;
+    margin: 30px 0 30px 70px;
+  }
+
+  footer {
+  width: 900px;
+  }
+
+  .footer {
+    display: inline-block;
+  }
+
+  .footer+.logos {
+    margin-left: 260px;
+  }
+
+  .logo {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+/*  float:; */
+}
+
+#flickr {
+  background-image:url("../images/flickr.png");
+  background-size: cover;
+}
+
+#vimeo {
+  background-image: url("../images/vimeo.png");
+  background-size: cover;
+}
+
+#pinterest {
+  background-image: url("../images/pinterest.png");
+  background-size: cover;
+}
+
+#twitter {
+  background-image: url("../images/twitter.png");
+  background-size: cover;
+}
+
+  footer span {
+  font-weight: bolder;
+}
+
+  p.footer {
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+
+/*
+
+footer span {
+  font-weight: bolder;
+}
+
+footer>.logo, footer>p {
+  display: inline-block;
+}
+
+footer>p.logos {
+  margin-left: 200px;
+  float: ;
+*/
